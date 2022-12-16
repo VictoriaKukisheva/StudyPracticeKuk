@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33dd72f2e46042f1a29d5dd6abee6389" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Product" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sale" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Supplier" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Town" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Product_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sale_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Supplier_Town" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

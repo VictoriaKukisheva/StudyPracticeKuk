@@ -48,8 +48,6 @@
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <TextBox x:Name="tbCount" Style="{StaticResource tbAuthSecond}" Text="{Binding ProductSale.Count}"
-                                     TextChanged="tbCount_TextChanged"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

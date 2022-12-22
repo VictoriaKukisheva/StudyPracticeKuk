@@ -153,10 +153,11 @@ namespace WPFChocolate.Pages
 
         private void toOrder_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new OrderPage(productsList));
+            AppFrame.frame.Navigate(new OrderPage(productsList));
+
             if(productsList.Count == 0)
             {
-                toOrder.Visibility=Visibility.Collapsed;
+                toOrder.Visibility = Visibility.Hidden;
             }
         }
 

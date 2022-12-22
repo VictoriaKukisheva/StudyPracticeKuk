@@ -23,18 +23,5 @@ namespace WPFChocolate.ApplicationData
                 }
             }
         }
-
-        int itemCounter = 0;
-        public int ItemCounter
-        {
-            get
-            {
-                return itemCounter;
-            }
-            set
-            {
-                ItemCounter = value;
-            }
-        }
     }
 }

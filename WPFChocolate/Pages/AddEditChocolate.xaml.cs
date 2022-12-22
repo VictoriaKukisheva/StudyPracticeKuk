@@ -26,7 +26,6 @@ namespace WPFChocolate.Pages
     {
         private Product _product = new Product();
         private string namePicture = String.Empty;
-        private byte[] _mainImageData = null;
 
         public AddEditChocolate(Product product)
         {
@@ -89,7 +88,6 @@ namespace WPFChocolate.Pages
                 cbType.Items.Add(item.Name);
             }
         }
-        String imgName = null;
         private void AddImage_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -124,6 +122,7 @@ namespace WPFChocolate.Pages
                 {
                     Entities.GetContext().Product.Add(_product);
                 }
+
                 Entities.GetContext().SaveChanges();
                 AppConnection.model.SaveChanges();
 

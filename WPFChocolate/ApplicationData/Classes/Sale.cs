@@ -11,16 +11,16 @@ namespace WPFChocolate.ApplicationData
     {
         public int[] ProductInSale
         {
-            get 
-            { 
-                int[] products = AppConnection.model.ProductSale.Where(x => x.IDSale == ID).Select(x => x.Product.ID).ToArray();
+            get
+            {
+               var products = AppConnection.model.ProductSale.Where(x => x.IDSale == ID).Select(x => x.Product.ID).ToArray();
 
-                for (int i = 0; i < products.Length; i++)
-                {
-                    int artBuf = products[i];
-                    products[i] = AppConnection.model.Product.Where(p => p.ID == artBuf)
-                        .Select(p => p.ID).FirstOrDefault();
-                }
+                //for (int i = 0; i < products.Length; i++)
+                //{
+                //    int artBuf = products[i];
+                //    products[i] = AppConnection.model.Product.Where(p => p.ID == product)
+                //        .Select(p => p.ID).FirstOrDefault();
+                //}
                 return products;
             }
         }

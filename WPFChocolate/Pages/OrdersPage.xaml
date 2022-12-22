@@ -46,8 +46,8 @@
                         <StackPanel Grid.Column="2">
                             <TextBlock Style="{StaticResource tblAuthSecond}">
                                 <Run Text="Товары: "/>
-                                <ListBox ItemsSource="{Binding ProductsInSale}"/>
                             </TextBlock>
+                            <ListBox Name="lbProducts" ItemsSource="{Binding ProductInSale}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

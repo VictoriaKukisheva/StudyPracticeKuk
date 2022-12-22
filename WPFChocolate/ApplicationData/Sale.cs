@@ -14,13 +14,17 @@ namespace WPFChocolate.ApplicationData
     
     public partial class Sale
     {
-        public int ID { get; set; }
-        public int IDUser { get; set; }
-        public int IDProduct { get; set; }
-        public System.DateTime Date { get; set; }
-        public int Count { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sale()
+        {
+            this.ProductSale = new HashSet<ProductSale>();
+        }
     
-        public virtual Product Product { get; set; }
-        public virtual User User { get; set; }
+        public int ID { get; set; }
+        public System.DateTime Date { get; set; }
+        public string Client { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductSale> ProductSale { get; set; }
     }
 }

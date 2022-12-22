@@ -22,6 +22,8 @@ namespace WPFChocolate.Pages
     /// </summary>
     public partial class ChocolateOutputPage : Page
     {
+        List<Product> productsList = new List<Product>();
+
         public ChocolateOutputPage()
         {
             InitializeComponent();
@@ -139,6 +141,22 @@ namespace WPFChocolate.Pages
         {
             AppConnection.model.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
             lvProducts.ItemsSource = FindProducts();
+        }
+
+        private void addToOrder_Click(object sender, RoutedEventArgs e)
+        {
+            productsList.Add(lvProducts.SelectedItem as Product);
+            //productsList[productsList.Count -1].ItemCounter++;
+            toOrder.Visibility = Visibility.Visible;
+        }
+
+        private void toOrder_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OrderPage(productsList));
+            if(productsList.Count == 0)
+            {
+                toOrder.Visibility=Visibility.Collapsed;
+            }
         }
     }
 }

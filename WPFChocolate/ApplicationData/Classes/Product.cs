@@ -13,14 +13,27 @@ namespace WPFChocolate.ApplicationData
         {
             get
             {
-                if(File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + Image))
+                if (File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + Image))
                 {
-                    return "/Images/" + Image; 
+                    return "/Images/" + Image;
                 }
                 else
                 {
                     return "Images/picture.jpg";
                 }
+            }
+        }
+
+        int itemCounter = 0;
+        public int ItemCounter
+        {
+            get
+            {
+                return itemCounter;
+            }
+            set
+            {
+                ItemCounter = value;
             }
         }
     }

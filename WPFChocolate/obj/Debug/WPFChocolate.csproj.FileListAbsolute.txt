@@ -30,3 +30,7 @@ N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.csproj.CoreCompileInputs.cac
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.csproj.CopyComplete
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.exe
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.pdb
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrderPage.g.cs
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrderPage.baml
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditOrderPage.g.cs
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditOrderPage.baml

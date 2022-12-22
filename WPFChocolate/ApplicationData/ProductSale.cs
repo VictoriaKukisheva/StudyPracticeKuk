@@ -12,17 +12,13 @@ namespace WPFChocolate.ApplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class ProductSale
     {
-        public int ID { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Surname { get; set; }
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Mail { get; set; }
-        public int IDRole { get; set; }
+        public int IDProduct { get; set; }
+        public int IDSale { get; set; }
+        public int Count { get; set; }
     
-        public virtual Role Role { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Sale Sale { get; set; }
     }
 }

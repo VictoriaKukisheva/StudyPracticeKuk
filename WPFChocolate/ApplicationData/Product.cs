@@ -17,7 +17,7 @@ namespace WPFChocolate.ApplicationData
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Sale = new HashSet<Sale>();
+            this.ProductSale = new HashSet<ProductSale>();
         }
     
         public int ID { get; set; }
@@ -32,6 +32,6 @@ namespace WPFChocolate.ApplicationData
         public virtual Supplier Supplier { get; set; }
         public virtual Type Type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sale> Sale { get; set; }
+        public virtual ICollection<ProductSale> ProductSale { get; set; }
     }
 }

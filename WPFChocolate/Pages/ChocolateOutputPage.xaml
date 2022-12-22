@@ -49,6 +49,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Добавить в заказ" Name="addToOrder" Click="addToOrder_Click"/>
+                            </ContextMenu>
+                        </Grid.ContextMenu>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="150"/>
                             <ColumnDefinition Width="450"/>
@@ -83,7 +88,8 @@
         </ListView>
 
         <TextBlock x:Name="tblFinderProduct" Style="{StaticResource tblAuthSecond}" Grid.Row="2" Margin="20"/>
-
+        <Button x:Name="toOrder" Grid.Row="2" Grid.Column="0" Visibility="Collapsed" Click="toOrder_Click"
+                Style="{StaticResource btnAuthtorize}" Width="200" Content="Перейти к заказу"/>
         <Button x:Name="AddData" Grid.Row="2" Grid.Column="2" Click="AddData_Click" 
                 Style="{StaticResource btnAuthtorize}" Width="200" Content="Добавить"/>
     </Grid>

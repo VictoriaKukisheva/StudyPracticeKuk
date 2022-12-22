@@ -15,13 +15,11 @@ namespace WPFChocolate.ApplicationData
     
     public partial class Entities : DbContext
     {
-        private static Entities _context;
+        public static Entities _context;
         public static Entities GetContext()
         {
-            if (_context == null)
-            {
+            if( _context == null )
                 _context = new Entities();
-            }
             return _context;
         }
         public Entities()
@@ -35,6 +33,7 @@ namespace WPFChocolate.ApplicationData
         }
     
         public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Sale> Sale { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }

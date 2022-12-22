@@ -26,6 +26,7 @@ namespace WPFChocolate.Pages
     {
         private Product _product = new Product();
         private string namePicture = String.Empty;
+        private byte[] _mainImageData = null;
 
         public AddEditChocolate(Product product)
         {
@@ -97,7 +98,7 @@ namespace WPFChocolate.Pages
 
                 dialog.ShowDialog();
 
-                string directory = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\'), dialog.FileName.Length - 
+                string directory = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\'), dialog.FileName.Length -
                     dialog.FileName.Substring(0, dialog.FileName.LastIndexOf('\\')).Length);
 
                 if (File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + directory))
@@ -112,10 +113,8 @@ namespace WPFChocolate.Pages
 
                 if (_product != null && _product.ID != 0)
                 {
-                    //DataContext = null;
                     DataContext = _product;
                 }
-                //namePicture = _product.Image;
             }
             catch (Exception ex)
             {

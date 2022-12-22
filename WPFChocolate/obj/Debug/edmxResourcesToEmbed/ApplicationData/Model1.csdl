@@ -14,7 +14,18 @@
     <Property Name="Cost" Type="Int32" />
     <NavigationProperty Name="Supplier" Relationship="Self.FK_Product_Supplier" FromRole="Product" ToRole="Supplier" />
     <NavigationProperty Name="Type" Relationship="Self.FK_Product_Type" FromRole="Product" ToRole="Type" />
-    <NavigationProperty Name="Sale" Relationship="Self.FK_Sale_Product" FromRole="Product" ToRole="Sale" />
+    <NavigationProperty Name="ProductSale" Relationship="Self.FK_ProductSale_Product" FromRole="Product" ToRole="ProductSale" />
+  </EntityType>
+  <EntityType Name="ProductSale">
+    <Key>
+      <PropertyRef Name="IDProduct" />
+      <PropertyRef Name="IDSale" />
+    </Key>
+    <Property Name="IDProduct" Type="Int32" Nullable="false" />
+    <Property Name="IDSale" Type="Int32" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ProductSale_Product" FromRole="ProductSale" ToRole="Product" />
+    <NavigationProperty Name="Sale" Relationship="Self.FK_ProductSale_Sale" FromRole="ProductSale" ToRole="Sale" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -29,12 +40,9 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IDUser" Type="Int32" Nullable="false" />
-    <Property Name="IDProduct" Type="Int32" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Count" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Sale_Product" FromRole="Sale" ToRole="Product" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Sale_User" FromRole="Sale" ToRole="User" />
+    <Property Name="Client" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProductSale" Relationship="Self.FK_ProductSale_Sale" FromRole="Sale" ToRole="ProductSale" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
@@ -85,7 +93,6 @@
     <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="IDRole" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
-    <NavigationProperty Name="Sale" Relationship="Self.FK_Sale_User" FromRole="User" ToRole="Sale" />
   </EntityType>
   <Association Name="FK_Product_Supplier">
     <End Role="Supplier" Type="Self.Supplier" Multiplicity="1">
@@ -115,17 +122,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Sale_Product">
-    <End Role="Product" Type="Self.Product" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
+  <Association Name="FK_ProductSale_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductSale" Type="Self.ProductSale" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Sale">
+      <Dependent Role="ProductSale">
         <PropertyRef Name="IDProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductSale_Sale">
+    <End Role="Sale" Type="Self.Sale" Multiplicity="1" />
+    <End Role="ProductSale" Type="Self.ProductSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sale">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductSale">
+        <PropertyRef Name="IDSale" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -140,20 +157,6 @@
       </Principal>
       <Dependent Role="User">
         <PropertyRef Name="IDRole" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Sale_User">
-    <End Role="User" Type="Self.User" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Sale">
-        <PropertyRef Name="IDUser" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -173,6 +176,7 @@
   </Association>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductSale" EntityType="Self.ProductSale" />
     <EntitySet Name="Role" EntityType="Self.Role" />
     <EntitySet Name="Sale" EntityType="Self.Sale" />
     <EntitySet Name="Supplier" EntityType="Self.Supplier" />
@@ -188,17 +192,17 @@
       <End Role="Type" EntitySet="Type" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
-    <AssociationSet Name="FK_Sale_Product" Association="Self.FK_Sale_Product">
+    <AssociationSet Name="FK_ProductSale_Product" Association="Self.FK_ProductSale_Product">
       <End Role="Product" EntitySet="Product" />
+      <End Role="ProductSale" EntitySet="ProductSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSale_Sale" Association="Self.FK_ProductSale_Sale">
       <End Role="Sale" EntitySet="Sale" />
+      <End Role="ProductSale" EntitySet="ProductSale" />
     </AssociationSet>
     <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
       <End Role="Role" EntitySet="Role" />
       <End Role="User" EntitySet="User" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Sale_User" Association="Self.FK_Sale_User">
-      <End Role="User" EntitySet="User" />
-      <End Role="Sale" EntitySet="Sale" />
     </AssociationSet>
     <AssociationSet Name="FK_Supplier_Town" Association="Self.FK_Supplier_Town">
       <End Role="Town" EntitySet="Town" />

@@ -83,6 +83,9 @@
     <Compile Include="ApplicationData\Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationData\ProductSale.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationData\Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -104,27 +107,34 @@
     <Compile Include="ApplicationData\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\add.xaml.cs">
-      <DependentUpon>add.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AddEditChocolate.xaml.cs">
       <DependentUpon>AddEditChocolate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditOrderPage.xaml.cs">
+      <DependentUpon>AddEditOrderPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ChocolateOutputPage.xaml.cs">
       <DependentUpon>ChocolateOutputPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\OrderPage.xaml.cs">
+      <DependentUpon>OrderPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\AddEditChocolate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddEditOrderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ChocolateOutputPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrderPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,6 +206,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\2-kursyi-testirovaniya-po-qa.jpg" />
+    <Resource Include="Images\сщтауеф.jpg" />
+    <Resource Include="Images\picture.jpg" />
+    <Resource Include="Images\alpengold.jpg" />
+    <Resource Include="Images\dove.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ApplicationData\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -206,11 +223,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Images\2-kursyi-testirovaniya-po-qa.jpg" />
-    <Resource Include="Images\сщтауеф.jpg" />
-    <Resource Include="Images\picture.jpg" />
-    <Resource Include="Images\alpengold.jpg" />
-    <Resource Include="Images\dove.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

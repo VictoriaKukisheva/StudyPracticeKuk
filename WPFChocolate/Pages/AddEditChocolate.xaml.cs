@@ -89,32 +89,23 @@ namespace WPFChocolate.Pages
                 cbType.Items.Add(item.Name);
             }
         }
-
+        String imgName = null;
         private void AddImage_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                OpenFileDialog dialog = new OpenFileDialog();
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-                dialog.ShowDialog();
-
-                string directory = dialog.FileName.Substring(dialog.FileName.LastIndexOf('\\'), dialog.FileName.Length -
-                    dialog.FileName.Substring(0, dialog.FileName.LastIndexOf('\\')).Length);
-
-                if (File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + directory))
+                if (!(bool)openFileDialog1.ShowDialog())
                 {
-                    File.Delete(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + directory);
+                    return;
                 }
+                    
+                openFileDialog1.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files(*.png)|*.png";
+                openFileDialog1.DefaultExt = ".jpeg";
 
-                File.Copy(dialog.FileName, System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + directory);
+                _product.Image = openFileDialog1.SafeFileName;
 
-                _product.Image = dialog.SafeFileName;
-                AppConnection.model.SaveChanges();
-
-                if (_product != null && _product.ID != 0)
-                {
-                    DataContext = _product;
-                }
             }
             catch (Exception ex)
             {

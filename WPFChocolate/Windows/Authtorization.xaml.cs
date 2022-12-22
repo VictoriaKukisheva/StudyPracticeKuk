@@ -96,17 +96,7 @@ namespace WPFChocolate.Windows
 
         private void Regist_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Registration registration = new Registration();
-                registration.Show();
-                Close();
-            }
-            catch
-            {
-                MessageBox.Show("Не удалось перейти в окно регистрации", "Уведомление",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            
         }
 
         private void EnterAsGuest_Click(object sender, RoutedEventArgs e)

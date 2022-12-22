@@ -15,11 +15,11 @@ namespace WPFChocolate.ApplicationData
             {
                 if (File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Images\\" + Image))
                 {
-                    return "/Images/" + Image;
+                    return "\\Images\\" + Image;
                 }
                 else
                 {
-                    return "Images/picture.jpg";
+                    return "\\Images\\picture.jpg";
                 }
             }
         }

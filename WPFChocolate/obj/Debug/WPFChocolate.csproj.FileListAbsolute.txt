@@ -8,7 +8,6 @@ N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate_MarkupCompile.lref
 N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditChocolate.g.cs
 N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\ChocolateOutputPage.g.cs
 N:\WPFChocolate\WPFChocolate\obj\Debug\Windows\MainWindow.g.cs
-N:\WPFChocolate\WPFChocolate\obj\Debug\Windows\Registration.g.cs
 N:\WPFChocolate\WPFChocolate\bin\Debug\WPFChocolate.exe.config
 N:\WPFChocolate\WPFChocolate\bin\Debug\WPFChocolate.exe
 N:\WPFChocolate\WPFChocolate\bin\Debug\WPFChocolate.pdb
@@ -22,7 +21,6 @@ N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditChocolate.baml
 N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\ChocolateOutputPage.baml
 N:\WPFChocolate\WPFChocolate\obj\Debug\Windows\Authtorization.baml
 N:\WPFChocolate\WPFChocolate\obj\Debug\Windows\MainWindow.baml
-N:\WPFChocolate\WPFChocolate\obj\Debug\Windows\Registration.baml
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.g.resources
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.Properties.Resources.resources
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.csproj.GenerateResource.cache
@@ -30,7 +28,9 @@ N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.csproj.CoreCompileInputs.cac
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.csproj.CopyComplete
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.exe
 N:\WPFChocolate\WPFChocolate\obj\Debug\WPFChocolate.pdb
-N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrderPage.g.cs
-N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrderPage.baml
-N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditOrderPage.g.cs
-N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddEditOrderPage.baml
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddOrderPage.g.cs
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\BasketPage.g.cs
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrdersPage.g.cs
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\AddOrderPage.baml
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\BasketPage.baml
+N:\WPFChocolate\WPFChocolate\obj\Debug\Pages\OrdersPage.baml

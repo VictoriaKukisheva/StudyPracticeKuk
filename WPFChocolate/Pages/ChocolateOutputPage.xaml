@@ -92,5 +92,7 @@
                 Style="{StaticResource btnAuthtorize}" Width="200" Content="Перейти к заказу"/>
         <Button x:Name="AddData" Grid.Row="2" Grid.Column="2" Click="AddData_Click" 
                 Style="{StaticResource btnAuthtorize}" Width="200" Content="Добавить"/>
+        <Button Name="changeToOrderPage" Grid.Row="2" Grid.Column="1" Click="changeToOrderPage_Click"
+                Style="{StaticResource btnAuthtorize}" Width="200" Content="Перейти к заказам"/>
     </Grid>
 </Page>

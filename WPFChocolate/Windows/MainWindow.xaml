@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFChocolate"
         mc:Ignorable="d"
-        Title="Главная страницы" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="../Images/logo.png" Height="500" Width="800">
+        Title="Главная страницы" WindowStartupLocation="CenterScreen" Icon="../Images/logo.png" Height="500" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

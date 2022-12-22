@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 N:\WPFChocolate\WPFChocolate\App.xaml
-7576636052
+7-1291017052
 2-1898592371
-27-1431705800
+28-1075900669
 18-309013161
-Pages\AddEditChocolate.xaml;Pages\AddEditOrderPage.xaml;Pages\ChocolateOutputPage.xaml;Pages\OrderPage.xaml;Windows\Authtorization.xaml;Windows\MainWindow.xaml;Windows\Registration.xaml;
+Pages\AddEditChocolate.xaml;Pages\AddOrderPage.xaml;Pages\ChocolateOutputPage.xaml;Pages\BasketPage.xaml;Pages\OrdersPage.xaml;Windows\Authtorization.xaml;Windows\MainWindow.xaml;
 
 False
 

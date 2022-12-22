@@ -105,6 +105,7 @@ namespace WPFChocolate.Pages
             if(SelectedUser.user == null || SelectedUser.user.IDRole != 1)
             {
                 AddData.Visibility = Visibility.Hidden;
+                changeToOrderPage.Visibility = Visibility.Hidden;
             }
         }
 
@@ -157,6 +158,11 @@ namespace WPFChocolate.Pages
             {
                 toOrder.Visibility=Visibility.Collapsed;
             }
+        }
+
+        private void changeToOrderPage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OrdersPage());
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿
 FN:\WPFChocolate\WPFChocolate\App.xaml;;
 FN:\WPFChocolate\WPFChocolate\Pages\AddEditChocolate.xaml;;
+FN:\WPFChocolate\WPFChocolate\Pages\AddOrderPage.xaml;;
 FN:\WPFChocolate\WPFChocolate\Pages\ChocolateOutputPage.xaml;;
+FN:\WPFChocolate\WPFChocolate\Pages\BasketPage.xaml;;
+FN:\WPFChocolate\WPFChocolate\Pages\OrdersPage.xaml;;
 FN:\WPFChocolate\WPFChocolate\Windows\Authtorization.xaml;;
 FN:\WPFChocolate\WPFChocolate\Windows\MainWindow.xaml;;
-FN:\WPFChocolate\WPFChocolate\Windows\Registration.xaml;;
-FN:\WPFChocolate\WPFChocolate\Pages\OrderPage.xaml;;
-FN:\WPFChocolate\WPFChocolate\Pages\AddEditOrderPage.xaml;;
 
